@@ -1,0 +1,186 @@
+1.1 Khái niệm 
+
+- CSS: viết tắt của Cascading Style Sheets.
+- là ngôn ngữ được dùng để định dạng kiểu hiển thị cho các phần tử HTML.
+
+1.2 Cú pháp: 
+
+- selector {
+property: value;
+}
+- Trong đó:
+ + selector: được gọi là bộ chọn.
+ + property: được gọi là thuộc tính.
+ + value: được gọi là giá trị của thuộc tính.
+
+1.3 Selectors (bộ chọn)
+
+- Bộ chọn CSS chọn (các) phần tử HTML mà bạn muốn tạo kiểu.
+- Ví dụ: các thẻ <h1>,<p>,... thì viết trong css sẽ chỉ lấy tên thẻ là h1, p.
++ Bộ chọn CSS được chia thành 5 loại:
+ - Simple selectors (bộ chọn đơn giản).
+ - Combinator selectors (bộ chọn tổng hợp).
+ - Pseudo-class selectors (bộ chọn lớp giả).
+ - Pseudo-elments selectors (bộ chọn phần tử giả).
+ - Attribute selectors (bộ chọn thuộc tính).
+
+1.4 Simple selectors (bộ chọn lớp giả)
+
+- Bộ chọn element(element selector): chọn các phần tử HTML dựa trên phần tử.
+- Bộ chọn id (id selector): sử dụng thuộc tính id (identifier- định danh) của 1 phần tử HTML để chọn 1 phần tử cụ thể. Lưu ý: tên id không được bắt đầu bằng số.
+ + #tile {} 
+
+- Bộ chọn class (class selector): chọn các thành phần HTML với 1 thuộc tính class cụ thể. Lưu ý: tên class không được bắt đầu bằng số.
+ + .title {}
+
+- Bộ chọn chung (universal selector): chọn tất cả các thành phần HTML trên trang.
+ + *{}
+
+- Bộ chọn theo nhóm (grouping selector): bộ chọn nhóm chon tất cả các element, id,class có cùng thuộc tính và giá trị thuộc tính.
+ + h1, h2, p {}
+
+2. Ba kiểu chèn CSS
+
+2.1 Inline CSS (nội tuyến)
+
+- Ta sẽ thêm thuộc tính style vào trong thẻ mà muốn sửa css.
+- Có thể được sử dụng để áp dụng 1 kiểu duy nhất cho 1 element.
+- Ví dụ: <p style="color: red;">this is a paragraph.</p>.
+
+2.2 Internal CSS (nội bộ)
+
+- Ta sẽ thêm thẻ <style></style> vào bất cứa đâu trong file html, sau đó viết CSS vào trong thẻ style đó.
+- Thường thì thẻ style này sẽ nằm trong thẻ head.
+- Có thể̉được sử dụng nếu có 1 trang HTML duy nhất.
+- Ví dụ: 
+ + <style> 
+p{}
+   </syle>
+
+2.3 External CSS (bên ngoài)
+
+- Ta thêm 1 file css ở bên ngoài, sau đó dùng thẻ </link> đặt ở trong thẻ head và chèn đường dẫn vào thuộc tính href ở trong thẻ link.
+- Có thể thay đổi giao diện của toàn bộ trang web bằng cách chỉ thay đổi một tệp.
+- Ví dụ: <link rel="sylesheet" hreh="mystyle.css">.
+
+* Lưu ý: nếu trùng bộ chọn và tên thuộc tính, thì giá trị của bộ chọn cuối cùng được sử dụng.
+
+3. Color (màu sắc), Backgrounds (nền)
+
+- Cài phần mềm Just Color Picker.
+- Color: màu sắc được gán giá trị bằng cách sử dụng:
+ + 1 số màu sắc được đặt tên sẵn: blue, black,...(ít sử dụng).
+ + HEX (phổ biến nhất).
+ + RBG (ít sử dụng).
+ + HSL (cực ít sử dụng).
+
+3.1 Color (màu sắc)
+
+- Màu HEX được chỉ bằng: #RRGGBB, trong đó các số nguyên thập lục phân RR(đỏ), GG(xanh lục), BB(xanh dương) chỉ định các thành phần màu.
+- Cú pháp: #RRGGBB.
+- Ví dụ: #000000(màu đen), #ffffff(màu trắng), #FF0000(màu đỏ).
+
+3.2 Backgrounds (nền): dùng để thêm nền vào cho element.
+
+- Một số thuộc tính
+
+ 3.2.1 background-color: nền là màu sắc
+
+ 3.2.2 background-clip: xác định phạm vi được thiết lập màu nền của phần tử (áp dụng cho background là màu sắc).
+
+- border-box: mặc định. đổ màu từ content cho đến hết border.
+- padding-box: đổ màu từ content cho đến hết padding.
+- content-box: chỉ đổ màu phần tử content.
+
+ 3.2.3 background-image: nền là hình ảnh hoặc màu gradient.
+
+  + Ví dụ: background-image: url(hinh-anh.png");
+- Có thể chèn nhiều hình ảnh:(url nào ở trước thì sẽ nằm bên trên).
+  +  Ví dụ: background-image: url(hinh-anh.png"),url("hinh-2.png");
+- Có thể là kiểu gradient: tạo ra 1 dải màu chuyển đổi từ màu này đến màu khác.
+ + Ví dụ: background-image: linear-gradient(180deg, #000000, #ffffff);
+- Kết hợp cả hình ảnh và gradient:
+ + Ví dụ: background-image: linear-gradient(180deg, #000000, #ffffff), url("hinh-anh.png");
+
+ 3.2.4 background-size: kích thước của background.
+
+- Giá trị có thể là đơn vị (px,%,...).
+ + Ví dụ: background-size: 100% auto;
+- contain: sẽ co dãn hình ảnh để hình ảnh nằm trọn trong khung element, hình ảnh không bị vỡ.
+ + Ví dụ: background-side: contain;
+- cover: kéo dãn hình ảnh sao cho vừa với khung, cắt bỏ đi những phần ảnh thừa để ảnh không bị vỡ.
+ + Ví dụ: background-size: cover;
+- backgroung-repeat: nền được lặp lại hay không.
+ + Ví dụ: 
+
+ 3.2.5 backgroundi-repeat: no-repeat; không lặp lại.
+
+   backgroundi-repeat: repeat-x; lặp lại theo trục ngang.
+   backgroundi-repeat: repeat-y; lặp lại theo trục dọc.  
+
+ 3.2.6 background-position: vị trí nền so với element. 
+
+- Có các giá trị:
+ + top left: trên-trái.
+ + top right: trên-phải.
+ + top center: trên- giữa.
+ + bottom left: dưới-trái.
+ + bottom right: dưới-phải.
+ + bottom 30px right 20p: cách dưới 30px-cách phải 20px.
+
+ 3.2.7 background-attachment: nền sẽ được cuộn hoặc cố định.
+ 
+ + Ví dụ:
+  - background-attachment: fixed; hình nền được fix cố định khi di cuộn web.
+
+ 3.2.8 background-origin: giống background-clip, nhưng background-clip là dành cho màu sắc, còn background-origin là dùng cho nền ảnh.
+ 
+- content-box: background chỉ chiếm phần content. 
+- padding-box: background chiếm phần content và padding.
+- border-box: background chiếm phần content, padding và border.
+
+ 3.2.9 background (cách viết ngắn gọn).
+
+- Ví dụ:
+ + background: #ffffff url("hinh-anh.png") no-repeat top right;
+
+4. Box Model, Borders, Padding, Margins.
+
+ 4.1 Box Model (mô hình hộp)
+- Tất cả các element có thể được coi là các cái hộp.
+- Hộp này bao gồm:
+ + Margin (lề): tạo khoảng cách cho vùng bên ngoài border (đường viền), lề trong suốt.
+ + Border (đường viền): đường viền bao quanh padding.
+ + Padding (phần đệm): tạo 1 khoảng trống xung quanh nội dung, phần đệm trong suốt
+ + Content (nội dung): nơi văn bản và hình ảnh xuất hiện.
+- Vào dev tools chọn tab Computed sẽ thấy sơ đồ của 1 element dùng để biểu diễn cho element ta đã chọn.
+
+4.2 Border (đường viền)
+
+- Đường viền bao quanh padding(phần đệm) và nội dung. dùng để bao bọc 1 element.
+- Tên thuộc tính: border-style.
+- Các kiểu border:
+
+* Kiểu hay dùng:
+ + dotted: đường viền chấm.
+ + dashed: đường viền nét đứt.
+ + solid: đường viền liền.
+ + none: không có đường viền. 
+
+* Kiểu ít dùng:
+ + double: đường viền kép.
+ + groove: đường viền có ràn 3D.
+ + ridge: đường viền có gờ 3D.
+ + inset: đường viền 3D chìm vào trong.
+ + outset: đường viền 3D nổi lên trên.
+ + hidden: đường viền bị ẩn.
+- Ví dụ: p {border: 5px solid red;}
+
+4.3 Padding (phần đệm)
+
+-Padding tạo 1 khoảng trống xung quanh nội dung và nằm bên trong đường viền.
+
+4.4 Margins (lề)
+ 
+-Margin để tạo khoảng cách giauwx element này với elememt khác. margin nằm bên ngoài border.
+
