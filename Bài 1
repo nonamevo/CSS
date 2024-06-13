@@ -184,3 +184,61 @@ p{}
  
 -Margin để tạo khoảng cách giauwx element này với elememt khác. margin nằm bên ngoài border.
 
+5. Thuộc tính height, width
+
+- height: chiều cao của element.
+- width: chiều rộng của element.
+- min-height: chiều cao tối thiểu của element.
+- min-width: chiều rộng tối thiểu của element.
+- max-height: chiều cao tối đa của element.
+- max-width: chiều rộng tối đa của element.
+* Lưu ý: chiều cao và chiều rộng là của phần content nằm bên trong phần padding. không bao gồm padding, border, margin.
+
+6. Text Fonts, Icons
+
+6.1 Text
+
+- Text Color: thuộc tính color được sử dụng để đặt màu sắc cho văn bản.
+ + Ví dụ: color: green;
+- Text Align: được sử dụng để thiết lập căn lề ngang của văn bản.
+ + text-align: center; căn giữa.
+ + text-align: left; căn trái.
+ + text-align: right; căn phải.
+ + text-align: justify; căn đều 2 bên.
+- Text Transform: thuộc tính text-transform sử dụng để chỉ định chữ hoa và chữ thường trong văn bản.
+ + text-trasform: uppercase; VIẾT CHỮ HOA.
+ + text-trasform: lowercase; viết chữ thường.
+ + text-trasform: capitalize; Viết Hoa Chữ Cái Đầu.
+
+6.2 Fonts
+
+* Trong CSS có năm họ phông chữ:
+ + Phông chữu Serif(có chân) có một nét nhỏ ở các cạnh của mỗi chữ cái.
+ + Phông chữ Sans-serif(không chân) có đườn kẻ rõ ràng (không có nét kẻ đi kèm).
+ + Phông chữ Monospace(đơn cách) ở đây tất cả các chữ cái có cùng chiều rộng cố định.
+ + Phông chữ Cursive(chữ viết ẩu) bắt chước chữ viết tay của con người.
+ + Phông chữ Fantasy(tưởng tượng) là phông chữ trang trí vui tươi.
+- Trang google fonts: https://fonts.google.com/
+- Thuộc tính font-family: để chỉ định fint chữ của văn bản.
+ + Ví dụ: font-family: "roboto", sans-serif;
+- font-syle: thuộc tính chủ yếu được sử dụng để chỉ định văn bản in nghiêng.
+ + Thuộc tính này có 3 giá trị:
+  - normal: mặc định.
+  - italic: van bản được hiển thị in nghiêng.
+  - oblique(xiên): văn bản 'nghiêng' (xiên rất giống với chữ nghiêng, nhưng nghiêng ít hơn và ít được sử dụng).
+- Font Weight:
+ + Thuộc tính font-weight để chỉ định độ dày của phông chữ
+ + Giá tị có thể là: norma, bold, 100,...900.
+ + Ví dụ:
+  - font-weight: 700;
+  - font-weight: bold;
+  - font-weight: normal;
+- Fonr Size:
+ + Thuộc tính font-size dùng để đặt kích thước của văn bản.
+ + Ví dụ: font-size: 12px; 
+-Icons
+ + Link website: https://fontawesome.com/
+ + Link CDN: https://cdnjs.com/libraries/font-awesome 
+* Chọn cái này: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
