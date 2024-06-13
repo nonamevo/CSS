@@ -1,0 +1,27 @@
+1 List (danh sách)
+
+- list-style-type: chỉ định kiểu đánh dấu danh sách.
+ + list-style-type: disc; mặc định.
+ + list-style-type: circle; hình tròn và trống bên trong.
+ + list-style-type: squre; hình vuông.
+ + list-style-type: discclosure-closed; hình tam giác trỏ bên phải.
+ + list-style-type: none; bị ẩn.
+ + list-style-type: upper-roman; chữ la mã.
+ + list-style-type: lower-alpha; chữ cái
+- Link nghiên cứu thêm: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
+- list-style-position: chỉ định vị trí của các điểm đánh dấu mục danh sách.
+ + list-style-position: outside; điểm đánh dấu nằm bên ngoài.
+ + list-style-position: inside; điểm đánh dấu nằm bên trong.
+
+2 Table (bảng)
+
+- Code các sau sử dụng HTML, CSS:
+
+4 Display (hiển thị)
+
+- display: inline; (không đặt được chiều rộng và chiều cao và margin và padding cho bên trên và bên dưới).
+- display: block; (chiều rộng kéo từ trái sang phải, luôn bắt đầu ở 1 hàng mới, cho phép đặt chiều rộng và cao, cho phép đặt margin và padding).
+- display: inline-block; (chiều rộng mặc định bằng chiều rộng của element, không bắt đầu ở 1 hàng mới. cho phép đặt chiều rộng và cao, cho phép đặt margin và padding).
+- display: none; (ẩn đi hoàn toàn).
+- visibility: hidden; ẩn nhưng chiếm 1 khoảng trống.
+- visibility: visible; hiển thị mặc định.
