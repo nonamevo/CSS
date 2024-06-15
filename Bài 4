@@ -1,0 +1,181 @@
+1 Float và Clear
+
+1.1 Float
+
+- Thuộc tính float là 1 thuộc tính được sử dụng để chuyển 1 phần tử sang góc trái hoặc phải của không gian bao quanh nó.
+- Float có các giá trị sau:
+ + float: left; phần tử nằm phía bên trái.
+ + float: right; phần tử nằm phía bên phải.
+ + float: none; mặc định.
+
+1.2 Clear
+
+- Thuộc tính clear là 1 thuộc tính ngược lại hoàn toàn với float.
+- Ngăn chặn phần tử B chiếm vùng không gian của phần tử A (với A là phần tử sử dụng float).
+- Thuộc tính clear có giá trị sau:
+ + clear: left;
+  + Ngăn phần tử B chiếm chỗ phần tử A, khi phần tử A có sử dụng float: left.
+  + Thuộc tính clear: left; không có tác dụng khi phần tử A sử dụng float: right;
+ + clear: right;
+  + Ngăn chặn phần tử B chiếm chổ phần tử A, khi phần tử A có sử dụng float: right;
+  + Thuộc tính clear: right; không có tác dụng khi phần tử A sử dụng float: left;
+ + clear: both; 
+  + clear: both: Khi cả A và B dùng float, ta không thể dùng clear (left, right), trong trường hợp này ta dùng clear: both; để ngăn C chiếm không gian trống.
+  + Thuộc tính clear: both; Ngăn chặn chiếm không gian khi có bất kỳ phần tử nào dùng float (left hoặc right).
+ + clear: none; là dạng phục hồi khi thành phần sử dụng thuộc tính clear.
+
+2 Attribute selectors (bộ chọn thuộc tính).
+
+- Bộ chọn attribute được sử dụng để chọn các phần tử có thuộc tính được chỉ định.
+- Một số kiểu chọn:
+- [attribute]
+ + Chọn tất cả các phần tử có thuộc tính [attribute].
+- [attribute="value"]
+ + Chọn tất cả các phần tử có thuộc tính  [attribute] phải chứa giá trị value.
+ + Chỉ được có giá trị duy nhất là value, nếu có thêm giá trị khác thì sẽ không được chọn.
+ + Giá trị có thể bao gồm nhiều từ.
+- [attibute~="value"]
+ + Chọn tất cả các phần tử có thuộc tính [attribute]ư phải chứa giá trị value.
+ + Nhưng value đó phải đứng độc lập, không được viết liền với từ khác.
+ + value phải là 1 từ khóa duy nhất.
+- [attribute|="value"]
+ + Chọn các phần tử có thuộc tính [attribute], giá trị có thể chính xác là giá trị được chỉ định hoặn giá trị được chỉ định theo dấu gach nối (-).
+* Lưu ý: giá trị là 1 từ nguyên vẹn, đơn lẻ như class="top" hoặc theo sau là dấu gạch ngang (-), như class="top-text".
+- [attribute^="value"]
+ + Chọn tất cả các phần tử có thuộc tính [attribute]ư bắt đầu bằng giá trị value.
+ + Khác với [attribute|="value"] ở chổ nó không ngoại lệ và chọn tất cả các phần tử bắt đầu bằng value, được phép viết liền với các từ khác.
+- [attribute$="value"]
+ + Chọn tất cả các phần tử có thuộc tính [attribute] kết thúc bằng giá trị value.
+* Lưu ý: các giá trị có thể được viết liền với từ khác.
+- [attribute*="value"]
+ + Chọn tất cả các phần tử có thuộc tính [attribute] chứa giá trị value.
+* Lưu ý: giá trị không nhất thiết phải là 1 từ nguyên vẹn.
+
+3 Units (đơn vị)
+
+- Độ dài tuyệt đối:
+- Là loại có đơn vị có giá trị cố định và thể hiện chính xác chiều dài kích thước nó hiển thị, không phụ thuộc cũng như không thay đổi bởi bất kỳ tác động nào bên ngoài.
+- Một số đơn vị:
+ + cm
+ + mm 
+ + in: inches (1in = 1/96px = 2.54cm).
+ + px: pixels (1px = 1/96 in) tương ứng với 1 điểm ảnh trên máy tính.
+ + pt: points (1pt = 1/72 in).
+ + pxc: picas (1pc = 12 pt).
+
+- Độ dài tương đối:
+- Là đơn vị đo lường được sử dụng trong css ở mức tương đối, thường phụ thuộc vào 1 thành phần nào đó thì mới xác định được giá trị của nó.
+- Một số đơn vị:
+ + %: giá trị tương đối so với phần tử cha.
+ + rem: giá trị tương đối với font-size của phần tử gốc (HTML).
+ + em: 1em tương đương với kích cỡ của fontsize của phần tử cha.
+ + vw (viewport width): 1vw tương đương với 1% của chiều rộng cửa sổ trình duyệt.
+ + vh (viewport height): 1vh tương đương với 1% của chiều cao cửa sổ trình duyệt.
+ + ex: 1ex tương đương với chiều cao của 1 chữ x của font hiện tại.
+ + ch: 1ch tương đương với chiều rộng của 1 số 0 theo size hiện tại.
+
+4 Specificity (tính đặc hiệu) và important (quan trọng)
+
+4.1 Specificity (tính đặc hiệu)
+
+- Tính đặc hiệu (độ ưu tiên) là cách mà trình duyệt quyết định sẽ áp dụng thuộc tính css nào với một phần tử khi cóa nhiều quy tắc css cùng trỏ đến phần tử đó.
+- Sự phân cấp tính đặc hiệu: mỗi selector đầu có vị trí của nó trong hệ thống phân cấp. độ đặc hiệu của selector có 4 mức:
+ + ID selectors: (a)
+ + Class selectors, attribute selectors, pseudo-classes: (b)
+ + Type selectors, pseudo-elements: (c)
+ + Universal selector, combinators, negation pseudo-class: (d = 0)
+
+4.2 !important (quan trọng)
+
+- Important được sử dụng để thay đổi thứ tự ưu tiên của css, khi một thuộc tính css nào đó được gán lệnh important thì đồng nghĩa việc nó sẽ có mức ưu tiên cao nhất.	 
+
+5 Math Functions (hàm toán học)
+
+- Các hàm toán học css cho phép các biểu thức toán học được sử dụng làm giá trị thuộc tính.
+- Các hàm toán học:
+- Hàm calc()
+ + Thực hiện 1 phép tính, kết quả sẽ lấy làm giá trị thuộc tính. các toán tử sau có thể được sử dụng được: +-*/
+ + Ví dụ: width: calc(100% - 100px);
+- Hàm max()
+ + Sử dụng giá trị lớn nhất, từ danh sách giá trị phân tach bằng dấu phẩy, là giá trị thuộc tính.
+ + Cú pháp: max(value1, value2,...)
+ + Ví dụ: width: max(50%, 300px);
+- Hàm min()
+ + Sử dụng giá trị nhỏ nhất, từ danh sách giá trị phân tách bằng dấu phẩy, làm giá trị thuộc tính.
+ + Cú pháp: min(value1,value2,...).
+ + Ví dụ: width: min(50%, 300px);
+
+6 CSS function attr()
+
+-attr() là một hàm CSS trả về giá trị của 1 thuộc tính 
+
+7 Variables (biến)
+
+- Mục đích của khai báo biến là để sử dụng được ở nhiều nơi.
+- Kiểu global(toàn cục): có thể sử dụng được nhiều nơi trong file css.
+- Cách tạo biến global:
+ :root {
+--ten-bien: giá trị;
+}
+
+- Cách sử dụng biến:
+ var(--ten-bien);
+
+- Kiểu local (cục bộ): chỉ sử dụng được ở trong phạm vi của nó, những đoạn css khác không siwr dụng được.
+- Cách tạo biến local:
+ selector {
+ --ten-bien: giá trị;
+}
+
+- Cách sử dụng biến:
+ selector {
+ --ten-bien: giá trị;
+ var(--ten-bien);
+}
+
+8 Box Sizing (kích thước hộp)
+- Mặc định khi ta sử dụng thuộc tính width, height thì chỉ là áp dụng cho phần content của 1 element.
+- 2 loại box-sizing:
+ + content-box: 
+  - Mặc định. width/height chỉ bao gồm "nội dung" của phần tử.
+  - width, height = content
+ + border-box:
+  - Width/height bao gồm: content, padding, border của phần tử.
+  - width, height - content + padding + border.
+
+9 Khái niệm Responsive
+
+- Responsive là để hiển thị 1 website có thể hiển thị tương thích trên mọi thiết bị như, máy tính, máy tính bảng, điện thoại.
+- Sử dụng meddia query để responsive giao diện.
+- Khai báo meta viewport:
+ + <meta name="viewport" content="width=device-width, initial-scale=1.0">.
+ + Trong đó:
+  - viewport: giúp trình duyệt hiểu thẻ meta này dùng để thiết lập khung nhìn.
+  - width=device-width: đặt chiều rộng bằng chiều rộng thiết bị (device-width).
+  - initial-scale=1.0: mức thu phóng của website. inital-scale thường được đặt bằng 1 (có thể tăng giá trị lên nhưng không được khuyến nghị).
+
+10 Media Queries
+
+- @media CSS là 1 tính năng mưới của CSS3.
+- Tính năng này cho phép ta tùy chỉnh CSS cho nhiều thiết bị khác nhau từ máy tính đến ipad, điện thoại và các thiết bị in ấn.
+- Cú pháp: 
+ + @media mediaType and (mediaFeature) {
+ //code
+}
+- Trong đó: 
+ + mediaType gồm các thuộc tính hay sử dụng sau:
+  + all: dùng cho mọi thiết bị.
+  + print: dùng cho máy in.
+  + screen: dùng cho máy tính và các thiết bị di đọng
+ + mediaFeature gồm các thuộc tính hay sử dụng sau:
+  + max-width: chiều rộng tối đa của viewport.
+  + min-width: chiều rộng tối thiểu của viewport.
+- PC first (responsive)
+ + Pc first là khái niệm để chỉ việc lập trình giao diện từ mà hình to đến màn hình nhỏ.
+ + Để làm việ với mô hình này chúng ta sử dụng max-width trong media query.
+
+- Mobile first:
+ + Mobile first là khái niệm để chỉ việc lập trình giao diện từ nhỏ đến to.
+ + Để làm việc với mô hình này chúng ta sử dụng min-width trong media query.
+ 
+   
