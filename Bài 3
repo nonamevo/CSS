@@ -5,7 +5,7 @@
  + list-style-type: circle; hình tròn và trống bên trong.
  + list-style-type: squre; hình vuông.
  + list-style-type: discclosure-closed; hình tam giác trỏ bên phải.
- + list-style-type: none; bị ẩn.
+ * list-style-type: none; bị ẩn.
  + list-style-type: upper-roman; chữ la mã.
  + list-style-type: lower-alpha; chữ cái
 - Link nghiên cứu thêm: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type
