@@ -1,0 +1,113 @@
+ 1 Flexbox
+
+1.1 Flexbox là gì?
+
+- Flexbox Layout là một kiểu bố cục trang có khả năng:
+ + Tự cân đối kích thước.
+ + Thay đổi chiều rộng/cao.
+ + Thay đổi thứ tự phần tử.
+- Flexbox có 2 thành phần là:
+ + container: là phần tử cha dùng để bọc bên ngoài.
+ + item: là phần tử con của element.
+
+1.2 Các thuộc tính của Flex
+
+1.2.1 display flex
+- Giúp sắp sếp các phần tử một cách dễ dàng, linh hoạt hơn trước.
+- Cú pháp:
+ + selector {
+ display: gia-tri;
+}
+- Giá trị:
+ + flex: giúp các thanh phần linh hoạt. chiều rộng bằng 100%
+ + inline-flex: giúp các thành phần linh hoạt width bằng width của các item bên trong.
+
+1.2.2 flex-direction
+- Xác định hướng của main-axis để container sắp xếp lại các item.
+- Cú pháp:
+ + selector {
+ flex-direction: gia-tri;
+}
+
+1.2.3 flex-wrap
+- Thuộc tính flex-wrap cho phép item có tự động xuống dòng hay không khi kích thước container thay đổi.
+- Cú pháp
+ + selector {
+ flex-wrap: gia-tri;
+}
+- Giá trị:
+ + nowrap: mặc định, tất cả các item nằm trên 1 dòng.
+ + wrap: chiều rộng các item lơn hơn chiều rộng containr nó tự động xuống dòng.
+ + wrap-reverse: tương tự wrap, thay vì xuống dòng thì item sẽ tự động nhảy lên trên.
+
+1.2.4 justify-content
+
+- Thuộc tính justify-content
+ để điều chỉnh vị trí bắt đầu và căn chỉnh các item theo trục main-axis.
+- Cú pháp:
+ + selector {
+ justify-content: giá trị;
+}
+- Giá trị: 
+ + flex-start: mặc định 
+ + flex-end: item sẽ bắt đầu từ lề chính main-and của container (khác với flex-direction: row-reverse; là đổi hướng hiển thị)
+ + center: nằm giữa.
+ + space-between: khoảng cahcs các item bằng nhau. item đầu và cuối sát với lề.
+ + space-around: tương tự between. khác ở chổ: khoảng cách giauwx item và lề = 1/2 khoảng cách giữa item và item.
+ + space-evenly:  tương tự between. khác ở chổ: khoảng cách giữa item và lề = khoảng cách giữa item và item.
+
+1.2.5 align-items
+
+- Thuộc tính align-items sử dụng để điều chỉnh vị trí bắt đầu và căn chỉnh các items theo trục cross-axis.
+- Dùng để căn chỉnh cho 1 dòng.
+- Cú pháp:
+ + selector {
+ align-items: gia-tri;
+}
+- Các giá trị:
+ + stretch: mặc định.
+ + flex-star: bắt đầu từ lề cross-star của container.
+ + flex-end: bắt đầu từ lề cross-end của container.
+ + center: căn giữa theo chiều của cross-axis.
+
+1.2.6 align-content
+
+- Thuộc tính align-content sử dụng để chỉnh vị trí ban đầu  và căn chỉnh các item theo trục cross-axis.
+- Dùng để căn chỉnh cho nhiều dòng.
+- Cú pháp:
+ + selector {
+align-content: gia-tri;
+}
+- Các giá trị:
+ + stretch: mặc định
+ + flex-start: item sẽ bắt đầu từ lề chứa cross-start của container.
+ + flex-end: item sẽ bắt đầu từ lề chứa cross-end của container.
+ + center: item sẽ nằm giữa container căn theo cross-axis.
+ + space-between: khoảng cách giữa các item = nhau. item đầu và cuối sát với lề.
+ + space-around: tương tự space-between, nhưng khác ở chổ: khoảng cách giữa item và lề = 1/2 khoảng cách giữa item và item.
+ + space-evanly: tương tự between. khác ở chổ: khoảng cách giữa item và lề = khoảng cách giữa item và item.
+
+1.2.7 align-seft
+
+- Tương tự như align-items nhưng là áp dụng cho 1 item nào đó
+- Cú pháp: 
+ + selector {
+ align-seft: gia-tri;
+}
+- Các giá trị:
+ + auto: mặc định.
+ + stretch: các phần tử sẽ tự động tang chiều cao để lấp đầy chiều cao của container. nhưng ưu tiên height nếu có.
+ + flex-start: item sẽ bắt đầu từ lề chứa cross-start của container.
+ + flex-end: item sẽ bắt đầu từ lề chứa cross-end của container.
+ + center: item sẽ nằm giữa container căn theo cross-axis.
+
+1.2.8 order
+
+- Thuộc tính order dùng để sắp xếp lại vị trí của các item.
+- Cú pháp:
+ + selector {
+ order: gia-tri; mặc định là 0
+}
+- Trong đó gia-tri>=0
+
+
