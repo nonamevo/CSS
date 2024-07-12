@@ -51,7 +51,7 @@ property: value;
 
 - Ta sẽ thêm thẻ <style></style> vào bất cứa đâu trong file html, sau đó viết CSS vào trong thẻ style đó.
 - Thường thì thẻ style này sẽ nằm trong thẻ head.
-- Có thể̉được sử dụng nếu có 1 trang HTML duy nhất.
+- Có thể được sử dụng nếu có 1 trang HTML duy nhất.
 - Ví dụ: 
  + <style> 
 p{}
@@ -113,8 +113,8 @@ p{}
 - backgroung-repeat: nền được lặp lại hay không.
  + Ví dụ: 
 
- 3.2.5 backgroundi-repeat: no-repeat; không lặp lại.
-
+ 3.2.5 
+   backgroundi-repeat: no-repeat; không lặp lại.
    backgroundi-repeat: repeat-x; lặp lại theo trục ngang.
    backgroundi-repeat: repeat-y; lặp lại theo trục dọc.  
 
@@ -157,7 +157,7 @@ p{}
 
 4.2 Border (đường viền)
 
-- Đường viền bao quanh padding(phần đệm) và nội dung. dùng để bao bọc 1 element.
+- Đường viền bao quanh padding (phần đệm) và nội dung. dùng để bao bọc 1 element.
 - Tên thuộc tính: border-style.
 - Các kiểu border:
 
@@ -213,8 +213,8 @@ p{}
 6.2 Fonts
 
 * Trong CSS có năm họ phông chữ:
- + Phông chữu Serif(có chân) có một nét nhỏ ở các cạnh của mỗi chữ cái.
- + Phông chữ Sans-serif(không chân) có đườn kẻ rõ ràng (không có nét kẻ đi kèm).
+ + Phông chữ Serif(có chân) có một nét nhỏ ở các cạnh của mỗi chữ cái.
+ + Phông chữ Sans-serif(không chân) có đường kẻ rõ ràng (không có nét kẻ đi kèm).
  + Phông chữ Monospace(đơn cách) ở đây tất cả các chữ cái có cùng chiều rộng cố định.
  + Phông chữ Cursive(chữ viết ẩu) bắt chước chữ viết tay của con người.
  + Phông chữ Fantasy(tưởng tượng) là phông chữ trang trí vui tươi.
